@@ -8,3 +8,9 @@ You need to install Beautiful Soup 4 in order to use this program
 $ pip install beautifulsoup4
 
 tested with python2.7-32
+
+
+Problems
+========
+
+- It will grab jobs that mention any of the keywords in your list.
