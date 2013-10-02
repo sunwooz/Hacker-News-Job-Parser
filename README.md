@@ -14,3 +14,12 @@ Problems
 ========
 
 - It will grab jobs that mention any of the keywords in your list.
+
+
+Updates
+=======
+
+October 1, 2013
+---------------
+
+-Program can now accept multiple urls
