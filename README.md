@@ -20,4 +20,6 @@ Updates
 =======
 
 == October 1, 2013 ==
-- Program can now accept multiple urls
+- Program can now accept multiple urls (redacted)
+- Program can now determine all the child pages with just the initial hacker news job page
+- Organized code for easier use
