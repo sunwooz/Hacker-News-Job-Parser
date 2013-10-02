@@ -17,7 +17,7 @@ text_file = 'jobsOct2013.txt'
 hackernews_page = 'https://news.ycombinator.com/item?id=6475879' 
 
 #Change the keywords for your location
-locations_to_check = ['nyc', 'New York', 'NewYork', 'NYC', 'NY', 'new york']
+keywords = ['nyc', 'New York', 'NewYork', 'NYC', 'NY', 'new york']
 
 
 def create_url_list(initial_link):
@@ -43,7 +43,7 @@ def gather_jobs():
 
 		for span in soup.find_all('span', class_='comment'): #find the comment span
 			text = span.get_text()
-			if any(job in text for job in locations_to_check):
+			if any(job in text for job in keywords):
 				job_list.append(text)
 				print 'Added Job.'
 	print 'Total of ' + str( len(job_list) ) + ' jobs added.'
