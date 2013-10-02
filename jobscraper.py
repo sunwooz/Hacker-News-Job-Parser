@@ -10,8 +10,10 @@ from bs4 import SoupStrainer
 job_list = []
 url_list = []
 
-#HOW TO USE
-###########
+##############
+# HOW TO USE #
+##############
+
 # 1. Install beautifulsoup4 with $ pip install beautifulsoup4
 # 2. Change the three variables, text_file, hackernews_page, keywords to your liking
 # 3. Download and run the script using python (I used python2.7-32)
