@@ -19,5 +19,5 @@ Problems
 Updates
 =======
 
-- October 1, 2013
+== October 1, 2013 ==
 - Program can now accept multiple urls
