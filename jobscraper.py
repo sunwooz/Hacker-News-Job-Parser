@@ -59,7 +59,6 @@ def write_jobs():
 
 	print 'Done.'
 
-#Change the url of the HackerNews 'Now Hiring' page (FIRST PAGE)
 create_url_list(hackernews_page)
 
 print_urls()
