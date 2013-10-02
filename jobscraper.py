@@ -2,10 +2,10 @@ import urllib2
 from bs4 import BeautifulSoup
 from bs4 import SoupStrainer
 
-#This is a small program to narrow down the list of HackerNews 'Now Hiring'
-#posts to the locations you want to work.
-#You'll have to install beautifulsoup4 with pip install beautifulsoup4
-#github.com/sunwooz
+# This is a small program to narrow down the list of HackerNews 'Now Hiring'
+# posts to the locations you want to work.
+# You'll have to install beautifulsoup4 with pip install beautifulsoup4
+# github.com/sunwooz
 
 job_list = []
 url_list = []
