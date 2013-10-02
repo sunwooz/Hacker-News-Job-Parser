@@ -57,7 +57,6 @@ def gather_jobs():
 
 def write_jobs():
 	print 'Writing jobs to ' + text_file
-	#Change the name of the file to your liking
 	file = open(text_file, 'w')
 
 	for single_job in job_list:
