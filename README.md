@@ -15,6 +15,7 @@ Problems
 ========
 
 - It will grab jobs that mention any of the keywords in your list.
+- It will break if someone creates a link with 'More' as the text :(
 
 
 Updates
