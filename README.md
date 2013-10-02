@@ -25,3 +25,7 @@ Updates
 - Program can now accept multiple urls (redacted)
 - Program can now determine all the child pages with just the initial hacker news job page
 - Organized code for easier use
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sunwooz/hacker-news-job-parser/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
