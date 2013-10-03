@@ -1,6 +1,8 @@
 Hacker-News-Job-Parser
 ======================
 
+I'm working on a web app version of this. The code in progress can be found at https://github.com/sunwooz/HackerNews-JobScraper-App
+
 This small python program scrapes data off of a 'Hiring Now' page on Hacker News and only saves the jobs with certain keywords. Ie 'New York', 'San Francisco' etc
 You can also use the keywords to find specific jobs ie 'Machine Learning'
 
