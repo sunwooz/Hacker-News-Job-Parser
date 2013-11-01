@@ -20,10 +20,10 @@ url_list = []
 # 4. Let me know how it worked out at yangsunwoo@gmail.com or on github
 
 # Name of file you want to create. Creates the file if it doesn't exist.
-text_file = 'jobsOct2013.txt' 
+text_file = 'jobsNov2013.txt' 
 
 #url of hacker news job page
-hackernews_page = 'https://news.ycombinator.com/item?id=6475879' 
+hackernews_page = 'https://news.ycombinator.com/item?id=6653437' 
 
 #Change the keywords for your location
 keywords = ['nyc', 'New York', 'NewYork', 'NYC', 'NY', 'new york']
@@ -33,7 +33,8 @@ def create_url_list(initial_link):
 	if len(url_list) == 0:
 		url_list.append(initial_link)
 
-	url_soup = BeautifulSoup( urllib2.urlopen( initial_link ).read() )
+	request = urllib2.Request(initial_link, headers={'User-Agent' : "Magic Browser"})
+	url_soup = BeautifulSoup( urllib2.urlopen( request ).read() )
 	more_link = url_soup.find('a', text='More')
 	if more_link:
 		href = more_link.get('href')
@@ -48,7 +49,8 @@ def print_urls():
 def gather_jobs():
 	print 'Gathering jobs...'
 	for url in url_list:
-		soup = BeautifulSoup( urllib2.urlopen( url ).read() )
+		request = urllib2.Request(url, headers={'User-Agent' : "Magic Browser"})
+		soup = BeautifulSoup( urllib2.urlopen( request ).read() )
 
 		for span in soup.find_all('span', class_='comment'): #find the comment span
 			text = span.get_text()
