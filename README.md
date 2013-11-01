@@ -26,6 +26,9 @@ Updates
 - Program can now determine all the child pages with just the initial hacker news job page
 - Organized code for easier use
 
+== November 1, 2013 ==
+- Fixed HTTP 403 Error by tricking hackernews into thinking the request is coming from a browser.
+
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sunwooz/hacker-news-job-parser/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
