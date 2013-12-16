@@ -1,6 +1,8 @@
 import urllib2
 from bs4 import BeautifulSoup
 from bs4 import SoupStrainer
+import threading
+import datetime
 
 # This is a small program to narrow down the list of HackerNews 'Now Hiring'
 # posts to the locations you want to work.
@@ -28,6 +30,22 @@ hackernews_page = 'https://news.ycombinator.com/item?id=6653437'
 #Change the keywords for your location
 keywords = ['nyc', 'New York', 'NewYork', 'NYC', 'NY', 'new york']
 
+class MyThread(threading.Thread):
+
+	def __init__(self, url):
+		threading.Thread.__init__(self)
+		self.url = url
+
+	def run(self):
+		request = urllib2.Request(self.url, headers={'User-Agent' : 'Magic Browser'})
+		soup = BeautifulSoup( urllib2.urlopen( request ).read() )
+
+		for span in soup.find_all('span', class_='comment'): #find the comment span
+			text = span.get_text()
+			if any(job in text for job in keywords):
+				job_list.append(text)
+				print 'Added Job.'
+
 
 def create_url_list(initial_link):
 	if len(url_list) == 0:
@@ -49,14 +67,9 @@ def print_urls():
 def gather_jobs():
 	print 'Gathering jobs...'
 	for url in url_list:
-		request = urllib2.Request(url, headers={'User-Agent' : "Magic Browser"})
-		soup = BeautifulSoup( urllib2.urlopen( request ).read() )
-
-		for span in soup.find_all('span', class_='comment'): #find the comment span
-			text = span.get_text()
-			if any(job in text for job in keywords):
-				job_list.append(text)
-				print 'Added Job.'
+		mythread = MyThread(url)
+		mythread.start()
+		mythread.join()
 	print 'Total of ' + str( len(job_list) ) + ' jobs added.'
 
 def write_jobs():
@@ -76,3 +89,5 @@ print_urls()
 gather_jobs()
 
 write_jobs()
+
+
