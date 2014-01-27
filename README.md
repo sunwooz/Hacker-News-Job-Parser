@@ -32,6 +32,9 @@ Updates
 == December 15, 2013 ==
 - Initial threading implemented. Average 2 second improvement.
 
+== January 27, 2014 ==
+- Switched from the 'Threading' library to 'Mutliprocessing.dummy' library. Speed increase of 2x from non-threaded version.
+
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sunwooz/hacker-news-job-parser/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
