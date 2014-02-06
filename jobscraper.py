@@ -32,7 +32,7 @@ keywords = ['nyc', 'New York', 'NewYork', 'NYC', 'NY', 'new york']
 
 def create_url_list(initial_link):
     if len(url_list) == 0:
-		url_list.append(initial_link)
+    	url_list.append(initial_link)
 
     request = urllib2.Request(initial_link, headers={'User-Agent' : "Magic Browser"})
     url_soup = BeautifulSoup( urllib2.urlopen( request ).read() )
